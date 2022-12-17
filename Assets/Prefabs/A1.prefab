@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6220769893143005548}
   - component: {fileID: 5663141061251186303}
   - component: {fileID: 1585831298529942060}
-  - component: {fileID: 3932918293019696043}
+  - component: {fileID: 6270118056452742488}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 5663141061251186303}
   m_maskType: 0
---- !u!114 &3932918293019696043
+--- !u!114 &6270118056452742488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 1427119724632937953}
   - component: {fileID: 1427119724632937954}
   - component: {fileID: 1043329533436628678}
-  - component: {fileID: 4486485882791817301}
+  - component: {fileID: 3163823468218155514}
   m_Layer: 0
   m_Name: BlackTile
   m_TagString: Untagged
@@ -288,7 +288,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4486485882791817301
+--- !u!114 &3163823468218155514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

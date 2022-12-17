@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6113994797589578865}
   - component: {fileID: 7664371716948052949}
   - component: {fileID: 1285207697151851920}
-  - component: {fileID: 8396732181375708972}
+  - component: {fileID: 8028185194907610995}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 7664371716948052949}
   m_maskType: 0
---- !u!114 &8396732181375708972
+--- !u!114 &8028185194907610995
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9000146315275351166}
   m_Layer: 0
-  m_Name: A2 White
+  m_Name: B1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 9000146316407312310}
   - component: {fileID: 9000146316407312311}
   - component: {fileID: 2032243796247545660}
-  - component: {fileID: 5176415735708503380}
+  - component: {fileID: 8619552810025881593}
   m_Layer: 0
   m_Name: WhiteTile
   m_TagString: Untagged
@@ -321,7 +321,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5176415735708503380
+--- !u!114 &8619552810025881593
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
