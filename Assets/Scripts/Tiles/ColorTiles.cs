@@ -10,9 +10,11 @@ public class ColorTiles : MonoBehaviour
     private Color _originalColor;
     private MeshRenderer meshRenderer;
     private BoardControler boardControler;
+    public bool isBlocked;
 
     void Start()
     {
+        isBlocked = true;
         meshRenderer = GetComponent<MeshRenderer>();
         _originalColor = meshRenderer.material.color;
         FindParent(transform.parent.transform);
@@ -33,7 +35,6 @@ public class ColorTiles : MonoBehaviour
 
     private void OnMouseOver()
     {
-        //meshRenderer.material.color = _mouseColor;
         if (boardControler != null)
         {
             boardControler.AlocateColorTile(this);
@@ -43,10 +44,12 @@ public class ColorTiles : MonoBehaviour
     public void NoHighlightTiles()
     {
         meshRenderer.material.color = _originalColor;
+        isBlocked = true;
     }
 
     public void HighlightTiles()
     {
         meshRenderer.material.color = _mouseColor;
+        isBlocked = false;
     }
 }

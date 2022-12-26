@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -42,9 +44,9 @@ public class BoardControler : MonoBehaviour
         }
     }
 
-    public void AlocateColorTile(ColorTiles selectedTiles)
+    public void AlocateColorTile(ColorTiles selectedTile)
     {
-        this.selectedTiles = selectedTiles;
+        selectedTiles = selectedTile;
     }
 
     public Transform GetSelectedTile()

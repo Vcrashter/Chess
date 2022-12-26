@@ -329,6 +329,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2130871426531193337, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2130871426531193337, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
@@ -341,11 +345,23 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2552548831355403713, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2552548831355403713, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2552548831355403713, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
     - target: {fileID: 2634797772024682039, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: myTile.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634797772024682039, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.x
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2634797772024682039, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
@@ -356,6 +372,10 @@ PrefabInstance:
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
+    - target: {fileID: 2951620330818692577, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2951981976257445570, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: m_Name
       value: PlayerPieces
@@ -365,11 +385,19 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3220503866438663856, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220503866438663856, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
     - target: {fileID: 3352227211260405762, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: myTile.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352227211260405762, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3352227211260405762, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
@@ -382,6 +410,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3607525821543442694, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: myTile.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3607525821543442694, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3607525821543442694, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3607525821543442694, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
@@ -397,11 +433,23 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3879271376935506470, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879271376935506470, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879271376935506470, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
     - target: {fileID: 4092602695192074465, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: myTile.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092602695192074465, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.x
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4092602695192074465, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
@@ -417,6 +465,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4131047237710493581, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131047237710493581, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131047237710493581, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
@@ -426,6 +482,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4499368263075035727, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: myTile.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499368263075035727, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499368263075035727, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4499368263075035727, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
@@ -441,6 +505,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4526278487132046682, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526278487132046682, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526278487132046682, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
@@ -450,6 +522,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5084367658388136551, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: myTile.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084367658388136551, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084367658388136551, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5084367658388136551, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
@@ -505,11 +585,19 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5444281016753470476, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444281016753470476, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
     - target: {fileID: 6808930163274927389, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: myTile.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808930163274927389, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.x
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6808930163274927389, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
@@ -521,9 +609,25 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7132950483059431077, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: myTileCoord.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7132950483059431077, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
+    - target: {fileID: 8253939505076984866, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035977088188491110, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035977088188491110, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
 --- !u!1001 &5633242682376305095
