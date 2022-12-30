@@ -58,6 +58,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RookLight (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1971375302472462, guid: f1fc282519e5c4a4daaa864f9c3d446f, type: 3}
+      propertyPath: m_TagString
+      value: Piece
+      objectReference: {fileID: 0}
     - target: {fileID: 4656301317612888, guid: f1fc282519e5c4a4daaa864f9c3d446f, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -125,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 4
   boardControler: {fileID: 0}
+  myTileCoord: {x: 7, y: 0}
 --- !u!4 &61925446004903123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4656301317612888, guid: f1fc282519e5c4a4daaa864f9c3d446f, type: 3}
@@ -140,6 +145,10 @@ PrefabInstance:
     - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_Name
       value: PawnLight (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
+      propertyPath: m_TagString
+      value: Piece
       objectReference: {fileID: 0}
     - target: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_RootOrder
@@ -185,6 +194,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 126287766133585010, guid: 391882f14be491c40962add653844907, type: 3}
+      propertyPath: m_Height
+      value: 1.2624097
+      objectReference: {fileID: 0}
+    - target: {fileID: 126287766133585010, guid: 391882f14be491c40962add653844907, type: 3}
+      propertyPath: m_Center.y
+      value: 0.5821556
+      objectReference: {fileID: 0}
+    - target: {fileID: 126287766133585010, guid: 391882f14be491c40962add653844907, type: 3}
+      propertyPath: m_Center.z
+      value: 5.548915e-16
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5438922344325530819, guid: 391882f14be491c40962add653844907, type: 3}
     - {fileID: 5915408837791689094, guid: 391882f14be491c40962add653844907, type: 3}
@@ -213,6 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 1
   boardControler: {fileID: 0}
+  myTileCoord: {x: 3, y: 1}
 --- !u!1001 &2947092072321362283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -223,6 +245,10 @@ PrefabInstance:
     - target: {fileID: 1028868664329696, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
       propertyPath: m_Name
       value: BishopLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1028868664329696, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
+      propertyPath: m_TagString
+      value: Piece
       objectReference: {fileID: 0}
     - target: {fileID: 4626390214331530, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
       propertyPath: m_RootOrder
@@ -268,6 +294,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 364780364762101401, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
+      propertyPath: m_Height
+      value: 1.5410107
+      objectReference: {fileID: 0}
+    - target: {fileID: 364780364762101401, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
+      propertyPath: m_Center.y
+      value: 0.7357246
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 448473818693122664, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
     - {fileID: 5894689924087366284, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
@@ -292,6 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 2
   boardControler: {fileID: 0}
+  myTileCoord: {x: 2, y: 0}
 --- !u!4 &2951620330818692577 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4626390214331530, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
@@ -307,6 +342,10 @@ PrefabInstance:
     - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_Name
       value: PawnLight (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
+      propertyPath: m_TagString
+      value: Piece
       objectReference: {fileID: 0}
     - target: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_RootOrder
@@ -375,6 +414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 1
   boardControler: {fileID: 0}
+  myTileCoord: {x: 5, y: 1}
 --- !u!4 &3051512645268011503 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
@@ -390,6 +430,10 @@ PrefabInstance:
     - target: {fileID: 1992623236052302, guid: 85ad2c556fdbd5747ac7f5f67f10e59b, type: 3}
       propertyPath: m_Name
       value: KnightLight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992623236052302, guid: 85ad2c556fdbd5747ac7f5f67f10e59b, type: 3}
+      propertyPath: m_TagString
+      value: Piece
       objectReference: {fileID: 0}
     - target: {fileID: 4967576429096158, guid: 85ad2c556fdbd5747ac7f5f67f10e59b, type: 3}
       propertyPath: m_RootOrder
@@ -463,6 +507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 3
   boardControler: {fileID: 0}
+  myTileCoord: {x: 6, y: 0}
 --- !u!1001 &4069428575377346034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -473,6 +518,10 @@ PrefabInstance:
     - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_Name
       value: PawnLight (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
+      propertyPath: m_TagString
+      value: Piece
       objectReference: {fileID: 0}
     - target: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_RootOrder
@@ -546,6 +595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 1
   boardControler: {fileID: 0}
+  myTileCoord: {x: 2, y: 1}
 --- !u!1001 &5349015874352460014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -556,6 +606,10 @@ PrefabInstance:
     - target: {fileID: 1945632463053948, guid: be3573ba2ba53ea4f8979e64874c493d, type: 3}
       propertyPath: m_Name
       value: QueenLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945632463053948, guid: be3573ba2ba53ea4f8979e64874c493d, type: 3}
+      propertyPath: m_TagString
+      value: Piece
       objectReference: {fileID: 0}
     - target: {fileID: 4607164402640316, guid: be3573ba2ba53ea4f8979e64874c493d, type: 3}
       propertyPath: m_RootOrder
@@ -629,6 +683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 5
   boardControler: {fileID: 0}
+  myTileCoord: {x: 3, y: 0}
 --- !u!1001 &5571640205165305624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -639,6 +694,10 @@ PrefabInstance:
     - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_Name
       value: PawnLight (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
+      propertyPath: m_TagString
+      value: Piece
       objectReference: {fileID: 0}
     - target: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_RootOrder
@@ -707,6 +766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 1
   boardControler: {fileID: 0}
+  myTileCoord: {x: 7, y: 1}
 --- !u!4 &5574417109042725398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
@@ -722,6 +782,10 @@ PrefabInstance:
     - target: {fileID: 1389686872840900, guid: 27d2608cb94ae2d44811af52793c3562, type: 3}
       propertyPath: m_Name
       value: KingLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389686872840900, guid: 27d2608cb94ae2d44811af52793c3562, type: 3}
+      propertyPath: m_TagString
+      value: Piece
       objectReference: {fileID: 0}
     - target: {fileID: 4239372230150158, guid: 27d2608cb94ae2d44811af52793c3562, type: 3}
       propertyPath: m_RootOrder
@@ -790,6 +854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 6
   boardControler: {fileID: 0}
+  myTileCoord: {x: 4, y: 0}
 --- !u!4 &6340159636934633308 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4239372230150158, guid: 27d2608cb94ae2d44811af52793c3562, type: 3}
@@ -805,6 +870,10 @@ PrefabInstance:
     - target: {fileID: 1971375302472462, guid: f1fc282519e5c4a4daaa864f9c3d446f, type: 3}
       propertyPath: m_Name
       value: RookLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971375302472462, guid: f1fc282519e5c4a4daaa864f9c3d446f, type: 3}
+      propertyPath: m_TagString
+      value: Piece
       objectReference: {fileID: 0}
     - target: {fileID: 4656301317612888, guid: f1fc282519e5c4a4daaa864f9c3d446f, type: 3}
       propertyPath: m_RootOrder
@@ -878,6 +947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 4
   boardControler: {fileID: 0}
+  myTileCoord: {x: 0, y: 0}
 --- !u!1001 &6848649025963173740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -888,6 +958,10 @@ PrefabInstance:
     - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_Name
       value: PawnLight (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
+      propertyPath: m_TagString
+      value: Piece
       objectReference: {fileID: 0}
     - target: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_RootOrder
@@ -961,6 +1035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 1
   boardControler: {fileID: 0}
+  myTileCoord: {x: 6, y: 1}
 --- !u!1001 &6953637400075850493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -971,6 +1046,10 @@ PrefabInstance:
     - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_Name
       value: PawnLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
+      propertyPath: m_TagString
+      value: Piece
       objectReference: {fileID: 0}
     - target: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_RootOrder
@@ -1039,6 +1118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 1
   boardControler: {fileID: 0}
+  myTileCoord: {x: 0, y: 1}
 --- !u!4 &6957630088424181747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
@@ -1054,6 +1134,10 @@ PrefabInstance:
     - target: {fileID: 1028868664329696, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
       propertyPath: m_Name
       value: BishopLight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1028868664329696, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
+      propertyPath: m_TagString
+      value: Piece
       objectReference: {fileID: 0}
     - target: {fileID: 4626390214331530, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
       propertyPath: m_RootOrder
@@ -1099,6 +1183,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 364780364762101401, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
+      propertyPath: m_Height
+      value: 1.5971106
+      objectReference: {fileID: 0}
+    - target: {fileID: 364780364762101401, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
+      propertyPath: m_Center.y
+      value: 0.7076747
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 448473818693122664, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
     - {fileID: 5894689924087366284, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
@@ -1123,6 +1215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 2
   boardControler: {fileID: 0}
+  myTileCoord: {x: 5, y: 0}
 --- !u!4 &7781811628054946045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4626390214331530, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
@@ -1138,6 +1231,10 @@ PrefabInstance:
     - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_Name
       value: PawnLight (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
+      propertyPath: m_TagString
+      value: Piece
       objectReference: {fileID: 0}
     - target: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_RootOrder
@@ -1206,6 +1303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 1
   boardControler: {fileID: 0}
+  myTileCoord: {x: 4, y: 1}
 --- !u!4 &8253939505076984866 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
@@ -1221,6 +1319,10 @@ PrefabInstance:
     - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_Name
       value: PawnLight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
+      propertyPath: m_TagString
+      value: Piece
       objectReference: {fileID: 0}
     - target: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_RootOrder
@@ -1294,6 +1396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 1
   boardControler: {fileID: 0}
+  myTileCoord: {x: 1, y: 1}
 --- !u!1001 &9040862682147211704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1304,6 +1407,10 @@ PrefabInstance:
     - target: {fileID: 1992623236052302, guid: 85ad2c556fdbd5747ac7f5f67f10e59b, type: 3}
       propertyPath: m_Name
       value: KnightLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992623236052302, guid: 85ad2c556fdbd5747ac7f5f67f10e59b, type: 3}
+      propertyPath: m_TagString
+      value: Piece
       objectReference: {fileID: 0}
     - target: {fileID: 4967576429096158, guid: 85ad2c556fdbd5747ac7f5f67f10e59b, type: 3}
       propertyPath: m_RootOrder
@@ -1377,3 +1484,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pieces: 3
   boardControler: {fileID: 0}
+  myTileCoord: {x: 1, y: 0}

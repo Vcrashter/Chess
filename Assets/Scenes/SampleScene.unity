@@ -325,45 +325,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2130871426531193337, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2130871426531193337, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2130871426531193337, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
     - target: {fileID: 2552548831355403713, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2552548831355403713, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2552548831355403713, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2552548831355403713, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2552548831355403713, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
-    - target: {fileID: 2634797772024682039, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.x
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2634797772024682039, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.x
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 2634797772024682039, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
@@ -372,166 +340,42 @@ PrefabInstance:
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
-    - target: {fileID: 2951620330818692577, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 2951981976257445570, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: m_Name
       value: PlayerPieces
       objectReference: {fileID: 0}
     - target: {fileID: 3220503866438663856, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3220503866438663856, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3220503866438663856, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
-    - target: {fileID: 3352227211260405762, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3352227211260405762, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.x
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3352227211260405762, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
     - target: {fileID: 3607525821543442694, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3607525821543442694, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3607525821543442694, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3607525821543442694, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3607525821543442694, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
-    - target: {fileID: 3879271376935506470, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3879271376935506470, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3879271376935506470, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3879271376935506470, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3879271376935506470, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
     - target: {fileID: 4092602695192074465, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4092602695192074465, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4092602695192074465, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
-    - target: {fileID: 4131047237710493581, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.x
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4131047237710493581, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4131047237710493581, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.x
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4131047237710493581, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4131047237710493581, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
     - target: {fileID: 4499368263075035727, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4499368263075035727, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4499368263075035727, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4499368263075035727, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4499368263075035727, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
     - target: {fileID: 4526278487132046682, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526278487132046682, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526278487132046682, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526278487132046682, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526278487132046682, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
-    - target: {fileID: 5084367658388136551, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5084367658388136551, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5084367658388136551, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5084367658388136551, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5084367658388136551, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
@@ -581,53 +425,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5444281016753470476, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5444281016753470476, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5444281016753470476, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
-    - target: {fileID: 6808930163274927389, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6808930163274927389, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.x
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6808930163274927389, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
     - target: {fileID: 7132950483059431077, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTile.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7132950483059431077, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: myTileCoord.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7132950483059431077, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
-    - target: {fileID: 8253939505076984866, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9035977088188491110, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9035977088188491110, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
 --- !u!1001 &5633242682376305095
@@ -810,6 +618,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4157809556054261871, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157809556054261871, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.x
       value: 3
       objectReference: {fileID: 0}
@@ -828,6 +640,10 @@ PrefabInstance:
     - target: {fileID: 4157809556446414505, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.y
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157809556450986460, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4157809556450986460, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.x
@@ -854,8 +670,16 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4157809556546602336, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157809556546602336, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.x
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157809556629127839, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4157809556629127839, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.y
@@ -868,6 +692,10 @@ PrefabInstance:
     - target: {fileID: 4157809556707889162, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.y
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157809556756939059, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4157809556756939059, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.x
@@ -888,6 +716,10 @@ PrefabInstance:
     - target: {fileID: 4157809556774271314, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.y
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157809556851852763, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4157809556851852763, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.x
@@ -950,6 +782,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4157809557553517805, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157809557553517805, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.x
       value: 7
       objectReference: {fileID: 0}
@@ -980,6 +816,10 @@ PrefabInstance:
     - target: {fileID: 4157809557640894481, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.y
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996023198076883195, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4996023198076883195, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.x
@@ -1214,12 +1054,20 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7333378554942865484, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333378554942865484, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.x
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7333378555012083836, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.y
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333378555178487019, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7333378555178487019, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.x
@@ -1236,6 +1084,10 @@ PrefabInstance:
     - target: {fileID: 7333378555284589588, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.y
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333378555319487242, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7333378555319487242, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.x
@@ -1258,6 +1110,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7333378555469745272, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333378555469745272, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.x
       value: 5
       objectReference: {fileID: 0}
@@ -1282,6 +1138,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7333378555806810486, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333378555806810486, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.x
       value: 7
       objectReference: {fileID: 0}
@@ -1322,6 +1182,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7333378556196737401, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333378556196737401, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.x
       value: 3
       objectReference: {fileID: 0}
@@ -1352,6 +1216,10 @@ PrefabInstance:
     - target: {fileID: 7333378556349762828, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.y
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333378556350692926, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7333378556350692926, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.x
@@ -1404,6 +1272,10 @@ PrefabInstance:
     - target: {fileID: 7333378556592813373, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.y
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505963949014701706, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
+      propertyPath: isBusy
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8505963949014701706, guid: 60ef12b83187c9e4fb93f29e6491607c, type: 3}
       propertyPath: coordinates.y
