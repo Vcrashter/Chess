@@ -340,6 +340,10 @@ PrefabInstance:
       propertyPath: boardControler
       value: 
       objectReference: {fileID: 2118154762}
+    - target: {fileID: 2951620330818692577, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2951981976257445570, guid: ac568cd24ebe55646bc53d48f9e67fa6, type: 3}
       propertyPath: m_Name
       value: PlayerPieces

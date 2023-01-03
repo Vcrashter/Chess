@@ -1,13 +1,7 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Tilemaps;
-using static UnityEditor.Progress;
 
 public class BoardControler : MonoBehaviour
 {
@@ -27,27 +21,56 @@ public class BoardControler : MonoBehaviour
     public void HighlightMoves(Vector2 piecePos, Pieces pieces)
     {
         List<Vector2> moves = new List<Vector2>();
+        TileControler tile;
         switch (pieces)
         {
             case Pieces.pawn:
                 moves.Add(new Vector2(0, 1) + piecePos);
-                moves.Add(new Vector2(0, 2) + piecePos);
+                if (piecePos.y == 1)
+                {
+                    for (int i = 1; i < 3; i++)
+                    {
+                        allTiles.TryGetValue(new Vector2(0, i) + piecePos, out tile);
+                        if (tile == null) { break; }
+                        if (tile.GetBusy()) { break; }
+                        moves.Add(tile.coordinates);
+                    }
+                }
+                if (piecePos.y == 7)
+                {
+                    Destroy(gameObject);
+                   // Instantiate<>(, transform.position, Quaternion.identity);
+                }
                 //moves.Add(new Vector2(1, 1) + piecePos);
-                //moves.Add(new Vector2(-1, 1) + piecePos;
+                //moves.Add(new Vector2(-1, 1) + piecePos);
                 break;
             case Pieces.bishop:
                 for (int i = 1; i < 8; i++)
                 {
-                    TileControler tile;
                     allTiles.TryGetValue(new Vector2(i, i) + piecePos, out tile);
-                    if (tile == null)
-                    {
-                        break;
-                    }
-                    if(tile.GetBusy())
-                    {
-                        break;
-                    }
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
+                    moves.Add(tile.coordinates);
+                }
+                for (int i = 1; i < 8; i++)
+                {
+                    allTiles.TryGetValue(new Vector2(-i, i) + piecePos, out tile);
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
+                    moves.Add(tile.coordinates);
+                }
+                for (int i = 1; i < 8; i++)
+                {
+                    allTiles.TryGetValue(new Vector2(i, -i) + piecePos, out tile);
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
+                    moves.Add(tile.coordinates);
+                }
+                for (int i = 1; i < 8; i++)
+                {
+                    allTiles.TryGetValue(new Vector2(-i, -i) + piecePos, out tile);
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
                     moves.Add(tile.coordinates);
                 }
                 break;
@@ -62,8 +85,92 @@ public class BoardControler : MonoBehaviour
                 moves.Add(new Vector2(-1, -2) + piecePos);
                 break;
             case Pieces.rook:
+                for (int i = 1; i < 8; i++)
+                {
+                    allTiles.TryGetValue(new Vector2(i, 0) + piecePos, out tile);
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
+                    moves.Add(tile.coordinates);
+                }
+                for (int i = 1; i < 8; i++)
+                {
+                    allTiles.TryGetValue(new Vector2(-i, 0) + piecePos, out tile);
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
+                    moves.Add(tile.coordinates);
+                }
+                for (int i = 1; i < 8; i++)
+                {
+                    allTiles.TryGetValue(new Vector2(0, i) + piecePos, out tile);
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
+                    moves.Add(tile.coordinates);
+                }
+                for (int i = 1; i < 8; i++)
+                {
+                    allTiles.TryGetValue(new Vector2(0, -i) + piecePos, out tile);
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
+                    moves.Add(tile.coordinates);
+                }
                 break;
             case Pieces.queen:
+                for (int i = 1; i < 8; i++)
+                {
+                    allTiles.TryGetValue(new Vector2(i, i) + piecePos, out tile);
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
+                    moves.Add(tile.coordinates);
+                }
+                for (int i = 1; i < 8; i++)
+                {
+                    allTiles.TryGetValue(new Vector2(-i, i) + piecePos, out tile);
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
+                    moves.Add(tile.coordinates);
+                }
+                for (int i = 1; i < 8; i++)
+                {
+                    allTiles.TryGetValue(new Vector2(i, -i) + piecePos, out tile);
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
+                    moves.Add(tile.coordinates);
+                }
+                for (int i = 1; i < 8; i++)
+                {
+                    allTiles.TryGetValue(new Vector2(-i, -i) + piecePos, out tile);
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
+                    moves.Add(tile.coordinates);
+                }
+                for (int i = 1; i < 8; i++)
+                {
+                    allTiles.TryGetValue(new Vector2(i, 0) + piecePos, out tile);
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
+                    moves.Add(tile.coordinates);
+                }
+                for (int i = 1; i < 8; i++)
+                {
+                    allTiles.TryGetValue(new Vector2(-i, 0) + piecePos, out tile);
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
+                    moves.Add(tile.coordinates);
+                }
+                for (int i = 1; i < 8; i++)
+                {
+                    allTiles.TryGetValue(new Vector2(0, i) + piecePos, out tile);
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
+                    moves.Add(tile.coordinates);
+                }
+                for (int i = 1; i < 8; i++)
+                {
+                    allTiles.TryGetValue(new Vector2(0, -i) + piecePos, out tile);
+                    if (tile == null) { break; }
+                    if (tile.GetBusy()) { break; }
+                    moves.Add(tile.coordinates);
+                }
                 break;
             case Pieces.king:
                 moves.Add(new Vector2(0, 1) + piecePos);
@@ -78,10 +185,9 @@ public class BoardControler : MonoBehaviour
             default:
                 break;
         }
-        
+
         for (int i = 0; i < moves.Count; i++)
         {
-            TileControler tile;
             allTiles.TryGetValue(moves[i], out tile);
             if (tile != null && !tile.GetBusy())
             {
@@ -101,7 +207,7 @@ public class BoardControler : MonoBehaviour
 
     public void AlocateColorTile(TileControler selectedTile)
     {
-        selectedTiles = selectedTile;
+        this.selectedTiles = selectedTile;
     }
 
     public Transform GetSelectedTile()
