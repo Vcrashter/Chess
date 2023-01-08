@@ -1,12 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TileControler : MonoBehaviour
 {
     public Vector2 coordinates;
-    private Color _mouseColor = Color.red;
+    private Color _mouseColor = Color.grey;
     private Color _originalColor;
     private MeshRenderer _meshRenderer;
     private BoardControler _boardControler;
@@ -57,6 +54,10 @@ public class TileControler : MonoBehaviour
 
     public void DoBusy(ControlPieces pieces)
     {
+        if (_myPiece != null)
+        {
+            Destroy(_myPiece.gameObject);
+        }
         _myPiece = pieces;
         isBusy = true;
     }
@@ -70,5 +71,10 @@ public class TileControler : MonoBehaviour
     public bool GetBusy()
     {
         return isBusy;
+    }
+
+    public TeamPieces GetTeam()
+    {
+        return _myPiece.GetTeam();
     }
 }

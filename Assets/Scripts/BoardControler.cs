@@ -7,6 +7,8 @@ public class BoardControler : MonoBehaviour
 {
     private Dictionary<Vector2, TileControler> allTiles = new Dictionary<Vector2, TileControler>();
     private TileControler selectedTiles;
+    private List<Vector2> moves = new List<Vector2>();
+    [SerializeField] private List<ControlPieces> allPieces = new List<ControlPieces>();
 
     private void Awake()
     {
@@ -18,99 +20,226 @@ public class BoardControler : MonoBehaviour
         }
     }
 
-    public void HighlightMoves(Vector2 piecePos, Pieces pieces)
+    public void HighlightMoves(Vector2 piecePos, Pieces pieces, TeamPieces teamPieces)
     {
-        List<Vector2> moves = new List<Vector2>();
+        moves.Clear();
         TileControler tile;
         switch (pieces)
         {
             case Pieces.pawn:
-                moves.Add(new Vector2(0, 1) + piecePos);
-                if (piecePos.y == 1)
+                if (teamPieces == TeamPieces.white)
                 {
-                    for (int i = 1; i < 3; i++)
+                    allTiles.TryGetValue(new Vector2(0, 1) + piecePos, out tile);
+                    if (tile != null)
                     {
-                        allTiles.TryGetValue(new Vector2(0, i) + piecePos, out tile);
-                        if (tile == null) { break; }
-                        if (tile.GetBusy()) { break; }
-                        moves.Add(tile.coordinates);
+                        if (!tile.GetBusy())
+                        {
+                            moves.Add(tile.coordinates);
+                            if (piecePos.y == 1)
+                            {
+                                for (int i = 1; i < 3; i++)
+                                {
+                                    allTiles.TryGetValue(new Vector2(0, i) + piecePos, out tile);
+                                    if (tile == null) { break; }
+                                    if (!tile.GetBusy()) { moves.Add(tile.coordinates); }
+                                }
+                            }
+                        }
+                    }
+
+                    allTiles.TryGetValue(new Vector2(1, 1) + piecePos, out tile);
+                    if (tile != null)
+                    {
+                        if (tile.GetBusy())
+                        {
+                            if (tile.GetTeam() != teamPieces)
+                            {
+                                moves.Add(tile.coordinates);
+                            }
+                        }
+                    }
+
+                    allTiles.TryGetValue(new Vector2(-1, 1) + piecePos, out tile);
+                    if (tile != null)
+                    {
+                        if (tile.GetBusy())
+                        {
+                            if (tile.GetTeam() != teamPieces)
+                            {
+                                moves.Add(tile.coordinates);
+                            }
+                        }
                     }
                 }
-                if (piecePos.y == 7)
+                else if (teamPieces == TeamPieces.black)
                 {
-                    Destroy(gameObject);
-                   // Instantiate<>(, transform.position, Quaternion.identity);
+                    allTiles.TryGetValue(new Vector2(0, -1) + piecePos, out tile);
+                    if (tile != null)
+                    {
+                        if (!tile.GetBusy())
+                        {
+                            moves.Add(tile.coordinates);
+                            if (piecePos.y == 6)
+                            {
+                                for (int i = 1; i < 3; i++)
+                                {
+                                    allTiles.TryGetValue(new Vector2(0, -i) + piecePos, out tile);
+                                    if (tile == null) { break; }
+                                    if (!tile.GetBusy()) { moves.Add(tile.coordinates); }
+                                }
+                            }
+                        }
+                    }
+
+                    allTiles.TryGetValue(new Vector2(1, -1) + piecePos, out tile);
+                    if (tile != null)
+                    {
+                        if (tile.GetBusy())
+                        {
+                            if (tile.GetTeam() != teamPieces)
+                            {
+                                moves.Add(tile.coordinates);
+                            }
+                        }
+                    }
+
+                    allTiles.TryGetValue(new Vector2(-1, -1) + piecePos, out tile);
+                    if (tile != null)
+                    {
+                        if (tile.GetBusy())
+                        {
+                            if (tile.GetTeam() != teamPieces)
+                            {
+                                moves.Add(tile.coordinates);
+                            }
+                        }
+                    }
                 }
-                //moves.Add(new Vector2(1, 1) + piecePos);
-                //moves.Add(new Vector2(-1, 1) + piecePos);
+
                 break;
             case Pieces.bishop:
                 for (int i = 1; i < 8; i++)
                 {
                     allTiles.TryGetValue(new Vector2(i, i) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 for (int i = 1; i < 8; i++)
                 {
                     allTiles.TryGetValue(new Vector2(-i, i) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 for (int i = 1; i < 8; i++)
                 {
                     allTiles.TryGetValue(new Vector2(i, -i) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 for (int i = 1; i < 8; i++)
                 {
                     allTiles.TryGetValue(new Vector2(-i, -i) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 break;
             case Pieces.knight:
-                moves.Add(new Vector2(2, 1) + piecePos);
-                moves.Add(new Vector2(2, -1) + piecePos);
-                moves.Add(new Vector2(1, 2) + piecePos);
-                moves.Add(new Vector2(-1, 2) + piecePos);
-                moves.Add(new Vector2(-2, 1) + piecePos);
-                moves.Add(new Vector2(-2, -1) + piecePos);
-                moves.Add(new Vector2(1, -2) + piecePos);
-                moves.Add(new Vector2(-1, -2) + piecePos);
+                TryGetTile(2, 1, piecePos, teamPieces);
+                TryGetTile(2, -1, piecePos, teamPieces);
+                TryGetTile(1, 2, piecePos, teamPieces);
+                TryGetTile(-1, 2, piecePos, teamPieces);
+                TryGetTile(-2, 1, piecePos, teamPieces);
+                TryGetTile(-2, -1, piecePos, teamPieces);
+                TryGetTile(1, -2, piecePos, teamPieces);
+                TryGetTile(-1, -2, piecePos, teamPieces);
                 break;
             case Pieces.rook:
                 for (int i = 1; i < 8; i++)
                 {
                     allTiles.TryGetValue(new Vector2(i, 0) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 for (int i = 1; i < 8; i++)
                 {
                     allTiles.TryGetValue(new Vector2(-i, 0) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 for (int i = 1; i < 8; i++)
                 {
                     allTiles.TryGetValue(new Vector2(0, i) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 for (int i = 1; i < 8; i++)
                 {
                     allTiles.TryGetValue(new Vector2(0, -i) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 break;
@@ -119,68 +248,124 @@ public class BoardControler : MonoBehaviour
                 {
                     allTiles.TryGetValue(new Vector2(i, i) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 for (int i = 1; i < 8; i++)
                 {
                     allTiles.TryGetValue(new Vector2(-i, i) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 for (int i = 1; i < 8; i++)
                 {
                     allTiles.TryGetValue(new Vector2(i, -i) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 for (int i = 1; i < 8; i++)
                 {
                     allTiles.TryGetValue(new Vector2(-i, -i) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 for (int i = 1; i < 8; i++)
                 {
                     allTiles.TryGetValue(new Vector2(i, 0) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 for (int i = 1; i < 8; i++)
                 {
                     allTiles.TryGetValue(new Vector2(-i, 0) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 for (int i = 1; i < 8; i++)
                 {
                     allTiles.TryGetValue(new Vector2(0, i) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 for (int i = 1; i < 8; i++)
                 {
                     allTiles.TryGetValue(new Vector2(0, -i) + piecePos, out tile);
                     if (tile == null) { break; }
-                    if (tile.GetBusy()) { break; }
+                    if (tile.GetBusy())
+                    {
+                        if (tile.GetTeam() != teamPieces)
+                        {
+                            moves.Add(tile.coordinates);
+                        }
+                        break;
+                    }
                     moves.Add(tile.coordinates);
                 }
                 break;
             case Pieces.king:
-                moves.Add(new Vector2(0, 1) + piecePos);
-                moves.Add(new Vector2(1, 1) + piecePos);
-                moves.Add(new Vector2(1, 0) + piecePos);
-                moves.Add(new Vector2(-1, -1) + piecePos);
-                moves.Add(new Vector2(0, -1) + piecePos);
-                moves.Add(new Vector2(-1, 0) + piecePos);
-                moves.Add(new Vector2(1, -1) + piecePos);
-                moves.Add(new Vector2(-1, 1) + piecePos);
+                TryGetTile(0, 1, piecePos, teamPieces);
+                TryGetTile(1, 1, piecePos, teamPieces);
+                TryGetTile(1, 0, piecePos, teamPieces);
+                TryGetTile(0, -1, piecePos, teamPieces);
+                TryGetTile(-1, 0, piecePos, teamPieces);
+                TryGetTile(-1, 1, piecePos, teamPieces);
+                TryGetTile(1, -1, piecePos, teamPieces);
+                TryGetTile(-1, -1, piecePos, teamPieces);
                 break;
             default:
                 break;
@@ -189,7 +374,7 @@ public class BoardControler : MonoBehaviour
         for (int i = 0; i < moves.Count; i++)
         {
             allTiles.TryGetValue(moves[i], out tile);
-            if (tile != null && !tile.GetBusy())
+            if (tile != null)
             {
                 tile.HighlightTiles();
             }
@@ -225,5 +410,47 @@ public class BoardControler : MonoBehaviour
         }
         Debug.LogError("Didnt find tile " + tileCoord);
         return null;
+    }
+
+    private void TryGetTile(int x, int y, Vector2 piecePos, TeamPieces teamPieces)
+    {
+        TileControler tile;
+        allTiles.TryGetValue(new Vector2(x, y) + piecePos, out tile);
+        if (tile != null)
+        {
+            if (tile.GetBusy())
+            {
+                if (tile.GetTeam() != teamPieces)
+                {
+                    moves.Add(tile.coordinates);
+                }
+            }
+            else
+            {
+                moves.Add(tile.coordinates);
+            }
+        }
+    }
+
+    public void ActivateCollider()
+    {
+        foreach (var item in allPieces)
+        {
+            if (item != null)
+            {
+                item.GetComponent<Collider>().enabled = true;
+            }
+        }
+    }
+
+    public void DeactivateCollider()
+    {
+        foreach (var item in allPieces)
+        {
+            if (item != null)
+            {
+                item.GetComponent<Collider>().enabled = false;
+            }
+        }
     }
 }

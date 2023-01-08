@@ -1,11 +1,16 @@
+using UnityEditor.Search;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class ControlPieces : MonoBehaviour
 {
     private Vector3 offset;
     [SerializeField] private Pieces _pieces;
+    [SerializeField] private TeamPieces _teamPieces;
     [SerializeField] BoardControler boardControler;
     [SerializeField] private Vector2 myTileCoord;
+    [SerializeField] private GameObject _whiteQueen;
+    [SerializeField] private GameObject _darkQueen;
     private Vector3 intTile;
     private TileControler _myTile;
 
@@ -22,7 +27,7 @@ public class ControlPieces : MonoBehaviour
     {
         Movement();
         offset = transform.position - MouseWorldPosition();
-        transform.GetComponent<Collider>().enabled = false;
+        boardControler.DeactivateCollider();
         intTile = transform.position;
     }
 
@@ -36,7 +41,7 @@ public class ControlPieces : MonoBehaviour
     private void OnMouseUp()
     {
         var selectedTile = boardControler.GetSelectedTile();
-        transform.GetComponent<Collider>().enabled = true;
+        boardControler.ActivateCollider();
         if (!selectedTile.GetComponent<TileControler>().isBlocked)
         {
             _myTile.DoUnBusy();
@@ -49,7 +54,30 @@ public class ControlPieces : MonoBehaviour
         {
             gameObject.transform.position = intTile;
         }
+
         boardControler.UnHighlightMove();
+
+        if (_pieces == Pieces.pawn)
+        {
+            if (_teamPieces == TeamPieces.white)
+            {
+                if (myTileCoord.y == 7)
+                {
+                    var queenIns = Instantiate(_whiteQueen, transform.position, Quaternion.identity);
+                    queenIns.GetComponent<ControlPieces>().myTileCoord = myTileCoord;
+                    Destroy(gameObject);
+                }
+            }
+            else if (_teamPieces == TeamPieces.black)
+            {
+                if (myTileCoord.y == 0)
+                {
+                    var queenIns = Instantiate(_darkQueen, transform.position, Quaternion.identity);
+                    queenIns.GetComponent<ControlPieces>().myTileCoord = myTileCoord;
+                    Destroy(gameObject);
+                }
+            }
+        }
     }
 
     Vector3 MouseWorldPosition()
@@ -61,7 +89,12 @@ public class ControlPieces : MonoBehaviour
 
     private void Movement()
     {
-        boardControler.HighlightMoves(myTileCoord, _pieces);
+        boardControler.HighlightMoves(myTileCoord, _pieces, _teamPieces);
+    }
+
+    public TeamPieces GetTeam()
+    {
+        return _teamPieces;
     }
 }
 
@@ -74,4 +107,11 @@ public enum Pieces
     rook,
     queen,
     king
+}
+
+public enum TeamPieces
+{
+    none,
+    white,
+    black
 }
