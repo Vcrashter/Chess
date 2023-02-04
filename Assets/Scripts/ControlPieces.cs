@@ -1,6 +1,4 @@
-using UnityEditor.Search;
 using UnityEngine;
-using UnityEngine.VFX;
 
 public class ControlPieces : MonoBehaviour
 {
@@ -9,10 +7,12 @@ public class ControlPieces : MonoBehaviour
     [SerializeField] private TeamPieces _teamPieces;
     [SerializeField] BoardControler boardControler;
     [SerializeField] private Vector2 myTileCoord;
-    [SerializeField] private GameObject _whiteQueen;
-    [SerializeField] private GameObject _darkQueen;
+    [SerializeField] private ControlPieces _whiteQueen;
+    [SerializeField] private ControlPieces _darkQueen;
     private Vector3 intTile;
+    private Vector2 _undoTilePos;
     private TileControler _myTile;
+    private TileControler _undoTile;
 
     private void Start()
     {
@@ -25,14 +25,24 @@ public class ControlPieces : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (_teamPieces != TurnControler.Instance.TeamPieces)
+        {
+            return;
+        }
         Movement();
         offset = transform.position - MouseWorldPosition();
         boardControler.DeactivateCollider();
         intTile = transform.position;
+        _undoTilePos = _myTile.coordinates;
+        _undoTile = _myTile;
     }
 
     private void OnMouseDrag()
     {
+        if (_teamPieces != TurnControler.Instance.TeamPieces)
+        {
+            return;
+        }
         Vector3 intPos = MouseWorldPosition() + offset;
         Vector3 newPos = new Vector3(intPos.x, 15f, intPos.z);
         transform.position = newPos;
@@ -40,6 +50,10 @@ public class ControlPieces : MonoBehaviour
 
     private void OnMouseUp()
     {
+        if (_teamPieces != TurnControler.Instance.TeamPieces)
+        {
+            return;
+        }
         var selectedTile = boardControler.GetSelectedTile();
         boardControler.ActivateCollider();
         if (!selectedTile.GetComponent<TileControler>().isBlocked)
@@ -49,6 +63,25 @@ public class ControlPieces : MonoBehaviour
             _myTile.DoBusy(this);
             gameObject.transform.position = selectedTile.position;
             myTileCoord = selectedTile.GetComponent<TileControler>().coordinates;
+            boardControler.CheckChess();
+            if (boardControler.GetTeamChess() == TurnControler.Instance.TeamPieces)
+            {
+                Undo();
+            }
+            else
+            {
+                boardControler.CheckChess();
+
+                if (boardControler.GetTeamChess() == TurnControler.Instance.TeamPieces)
+                {
+                    boardControler.RemoveChess();
+                    Undo();
+                }
+                else
+                {
+                    TurnControler.Instance.ChangeTeam();
+                }
+            }
         }
         else
         {
@@ -65,7 +98,10 @@ public class ControlPieces : MonoBehaviour
                 {
                     var queenIns = Instantiate(_whiteQueen, transform.position, Quaternion.identity);
                     queenIns.GetComponent<ControlPieces>().myTileCoord = myTileCoord;
+                    boardControler.RemovePieces(this);
                     Destroy(gameObject);
+                    boardControler.AddPieces(queenIns);
+                    queenIns.gameObject.SetActive(true);
                 }
             }
             else if (_teamPieces == TeamPieces.black)
@@ -74,10 +110,20 @@ public class ControlPieces : MonoBehaviour
                 {
                     var queenIns = Instantiate(_darkQueen, transform.position, Quaternion.identity);
                     queenIns.GetComponent<ControlPieces>().myTileCoord = myTileCoord;
+                    boardControler.RemovePieces(this);
                     Destroy(gameObject);
+                    boardControler.AddPieces(queenIns);
+                    queenIns.gameObject.SetActive(true);
                 }
             }
         }
+    }
+    private void Undo()
+    {
+        _myTile.Undo();
+        gameObject.transform.position = intTile;
+        myTileCoord = _undoTilePos;
+        _myTile = _undoTile;
     }
 
     Vector3 MouseWorldPosition()
@@ -91,11 +137,11 @@ public class ControlPieces : MonoBehaviour
     {
         boardControler.HighlightMoves(myTileCoord, _pieces, _teamPieces);
     }
+    public TeamPieces GetTeam() => _teamPieces;
 
-    public TeamPieces GetTeam()
-    {
-        return _teamPieces;
-    }
+    public Vector2 GetTileCoord() => myTileCoord;
+
+    public Pieces GetPieces() => _pieces;
 }
 
 public enum Pieces

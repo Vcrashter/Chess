@@ -128,8 +128,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 4
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 7, y: 0}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}
 --- !u!4 &61925446004903123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4656301317612888, guid: f1fc282519e5c4a4daaa864f9c3d446f, type: 3}
@@ -233,8 +236,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 1
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 3, y: 1}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}
 --- !u!1001 &2947092072321362283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -325,8 +331,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 2
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 2, y: 0}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}
 --- !u!4 &2951620330818692577 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4626390214331530, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
@@ -413,8 +422,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 1
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 5, y: 1}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}
 --- !u!4 &3051512645268011503 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
@@ -506,8 +518,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 3
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 6, y: 0}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}
 --- !u!1001 &4069428575377346034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -594,8 +609,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 1
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 2, y: 1}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}
 --- !u!1001 &5349015874352460014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -682,8 +700,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 5
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 3, y: 0}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}
 --- !u!1001 &5571640205165305624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -765,8 +786,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 1
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 7, y: 1}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}
 --- !u!4 &5574417109042725398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
@@ -853,8 +877,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 6
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 4, y: 0}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}
 --- !u!4 &6340159636934633308 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4239372230150158, guid: 27d2608cb94ae2d44811af52793c3562, type: 3}
@@ -946,8 +973,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 4
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 0, y: 0}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}
 --- !u!1001 &6848649025963173740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1034,8 +1064,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 1
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 6, y: 1}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}
 --- !u!1001 &6953637400075850493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1117,8 +1150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 1
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 0, y: 1}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}
 --- !u!4 &6957630088424181747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
@@ -1214,8 +1250,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 2
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 5, y: 0}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}
 --- !u!4 &7781811628054946045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4626390214331530, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
@@ -1302,8 +1341,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 1
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 4, y: 1}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}
 --- !u!4 &8253939505076984866 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
@@ -1395,8 +1437,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 1
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 1, y: 1}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}
 --- !u!1001 &9040862682147211704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1483,5 +1528,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieces: 3
+  _teamPieces: 0
   boardControler: {fileID: 0}
   myTileCoord: {x: 1, y: 0}
+  _whiteQueen: {fileID: 0}
+  _darkQueen: {fileID: 0}

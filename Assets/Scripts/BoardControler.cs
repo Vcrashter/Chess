@@ -2,13 +2,17 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BoardControler : MonoBehaviour
 {
+    [SerializeField] private Image image;
+
     private Dictionary<Vector2, TileControler> allTiles = new Dictionary<Vector2, TileControler>();
     private TileControler selectedTiles;
     private List<Vector2> moves = new List<Vector2>();
     [SerializeField] private List<ControlPieces> allPieces = new List<ControlPieces>();
+    private TeamPieces _teamChess = TeamPieces.none;
 
     private void Awake()
     {
@@ -20,7 +24,7 @@ public class BoardControler : MonoBehaviour
         }
     }
 
-    public void HighlightMoves(Vector2 piecePos, Pieces pieces, TeamPieces teamPieces)
+    public bool HighlightMoves(Vector2 piecePos, Pieces pieces, TeamPieces teamPieces, bool checkForChess = false)
     {
         moves.Clear();
         TileControler tile;
@@ -371,14 +375,43 @@ public class BoardControler : MonoBehaviour
                 break;
         }
 
-        for (int i = 0; i < moves.Count; i++)
+        if (checkForChess)
         {
-            allTiles.TryGetValue(moves[i], out tile);
-            if (tile != null)
+            for (int i = 0; i < moves.Count; i++)
             {
-                tile.HighlightTiles();
+                allTiles.TryGetValue(moves[i], out tile);
+                if (tile.GetBusy())
+                {
+                    if (tile.GetMyPiece().GetPieces() == Pieces.king)
+                    {
+                        if (teamPieces == TeamPieces.white)
+                        {
+                            _teamChess = TeamPieces.black;
+                            ChangeColor(Color.black);
+                            return true;
+                        }
+                        else if (teamPieces == TeamPieces.black)
+                        {
+                            _teamChess = TeamPieces.white;
+                            ChangeColor(Color.white);
+                            return true;
+                        }
+                    }
+                }
             }
         }
+        else
+        {
+            for (int i = 0; i < moves.Count; i++)
+            {
+                allTiles.TryGetValue(moves[i], out tile);
+                if (tile != null)
+                {
+                    tile.HighlightTiles();
+                }
+            }
+        }
+        return false;
     }
 
     public void UnHighlightMove()
@@ -452,5 +485,47 @@ public class BoardControler : MonoBehaviour
                 item.GetComponent<Collider>().enabled = false;
             }
         }
+    }
+
+    public void CheckChess()
+    {
+        foreach (var item in allPieces)
+        {
+            if (item.GetTeam() != TeamPieces.none)
+            {
+                if (HighlightMoves(item.GetTileCoord(), item.GetPieces(), item.GetTeam(), true))
+                {
+                    return;
+                }
+            }
+        }
+        _teamChess = TeamPieces.none;
+        ChangeColor(Color.red);
+    }
+
+    public TeamPieces GetTeamChess() => _teamChess;
+
+    public void AddPieces(ControlPieces pieces)
+    {
+        allPieces.Add(pieces);
+    }
+
+    public void RemovePieces(ControlPieces pieces)
+    {
+        if (allPieces.Contains(pieces))
+        {
+            allPieces.Remove(pieces);
+        }
+    }
+
+    public void RemoveChess()
+    {
+        _teamChess = TeamPieces.none;
+        ChangeColor(Color.red);
+    }
+
+    private void ChangeColor(Color color)
+    {
+        image.color = color;
     }
 }

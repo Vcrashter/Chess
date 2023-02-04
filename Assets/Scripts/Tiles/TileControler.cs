@@ -10,6 +10,7 @@ public class TileControler : MonoBehaviour
     private ControlPieces _myPiece;
     public bool isBlocked;
     public bool isBusy;
+    private ControlPieces _undoPiece;
 
     void Start()
     {
@@ -56,7 +57,8 @@ public class TileControler : MonoBehaviour
     {
         if (_myPiece != null)
         {
-            Destroy(_myPiece.gameObject);
+            _undoPiece = _myPiece;
+            _undoPiece.gameObject.SetActive(false);
         }
         _myPiece = pieces;
         isBusy = true;
@@ -68,13 +70,24 @@ public class TileControler : MonoBehaviour
         isBusy = false;
     }
 
-    public bool GetBusy()
+    public bool GetBusy() => isBusy;
+
+    public TeamPieces GetTeam() => _myPiece.GetTeam();
+
+    public void Undo()
     {
-        return isBusy;
+        if (_undoPiece != null)
+        {
+            _undoPiece.gameObject.SetActive(true);
+            _myPiece = _undoPiece;
+        }
+        isBusy = true;
+        if (_undoPiece == null)
+        {
+            _myPiece = null;
+            isBusy = false;
+        }
     }
 
-    public TeamPieces GetTeam()
-    {
-        return _myPiece.GetTeam();
-    }
+    public ControlPieces GetMyPiece() => _myPiece;
 }
